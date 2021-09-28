@@ -1,0 +1,86 @@
+html {
+  font-size: 62.5%;
+  color: var(--text-color);
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(rgba(32, 30, 32, 0.281), rgba(12, 12, 12, 0.562)),
+    url("/assets/img/login-bg.jpg") no-repeat left top;
+  background-size: cover;
+  background-position: center;
+}
+.login_container {
+  width: 550px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255);
+  border-radius: 10px;
+  padding: 40px 0px;
+  font-family: "Roboto", sans-serif;
+}
+.login_logo-img {
+  width: 60px;
+}
+.login_header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+
+  line-height: 3.2rem;
+}
+.login-button {
+  height: 40px;
+  width: 320px;
+  text-align: center;
+  border: 2px solid #dce0e3;
+  background-color: #fff;
+  border-radius: 44px;
+  display: inline-block;
+  position: relative;
+  padding-left: 16px;
+}
+.login_main {
+  height: 90px;
+  margin-top: 24px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+.login_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-button_icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.login-button_title {
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 35px;
+}
+.login_about {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.dont-account {
+  margin: 40px 0 10px 0;
+  font-size: 1.4rem;
+}
+.login_about-link {
+  color: var(--primary-color);
+}
+.login_about-link::hover {
+  background-color: #dce0e3;
+  font-weight: 700;
+}
