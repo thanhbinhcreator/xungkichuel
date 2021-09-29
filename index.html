@@ -9,7 +9,7 @@
     <meta property="og:title" content="Đội sinh viên Xung kích" />
     <meta
       property="og:description"
-      content="Đội sinh viên Xung Kích là một trong các CLB/Đội/Nhóm được hiệu trưởng Trường đại học Kinh tế - Luật (Đại học Quốc gia TP. HCM) ký quyết định thành lập và trực thuộc quản lý của phòng Công tác sinh viên. Qua hơn 10 năm thành lập và phát triển đội ngày càng thể hiện rõ vai trò của mình bằng các hoạt động đồng hành phòng Công tác sinh viên hỗ trợ sinh viên ... UEL, myUEL, điểm chuẩn UEL, Điểm chuẩn Kinh tế - Luật, Tuyển Sinh UEL "
+      content="Đội Sinh Viên Xung Kích là một trong các CLB/Đội/Nhóm được hiệu trưởng Trường đại học Kinh tế - Luật (Đại học Quốc gia TP. HCM) ký quyết định thành lập và trực thuộc quản lý của phòng Công tác sinh viên. Qua hơn 10 năm thành lập và phát triển đội ngày càng thể hiện rõ vai trò của mình bằng các hoạt động đồng hành phòng Công tác sinh viên hỗ trợ sinh viên ... UEL, myUEL, điểm chuẩn UEL, Điểm chuẩn Kinh tế - Luật, Tuyển Sinh UEL "
     />
 
     <meta property="og:image" content="./assets/img/youtube.jpg" />
@@ -34,7 +34,6 @@
   <body>
     <div class="xuki">
       <div class="xuki-body">
-        s
         <div class="xuki-nav">
           <ul class="xuki-nav__list">
             <li class="nav__list--item">
@@ -56,7 +55,7 @@
             </li>
           </ul>
         </div>
-        <div class="home-section" id="body-about">
+        <div class="home-section page-section" id="body-about">
           <div class="xuki-header">
             <div class="grid">
               <div class="header-wrap">
@@ -78,7 +77,7 @@
               </div>
             </div>
           </div>
-          <section class="home-body__about">
+          <section class="home-body__about page-section">
             <div class="grid">
               <div class="body-about__container">
                 <img
@@ -109,7 +108,7 @@
           </section>
         </div>
 
-        <section class="home-body__active" id="body-active">
+        <section class="home-body__active page-section" id="body-active">
           <h1 class="home-body__title body-active__title">
             Các hoạt động của đội
           </h1>
@@ -202,7 +201,7 @@
             </div>
           </div>
         </section>
-        <section class="home-body__benefits" id="body-benefit">
+        <section class="home-body__benefits page-section" id="body-benefit">
           <h1 class="home-body__title body-benefits__title">
             Quyền lợi của thành viên
           </h1>
@@ -256,7 +255,7 @@
             </ul>
           </div>
         </section>
-        <section class="home-body__struct" id="body__struct">
+        <section class="home-body__struct page-section" id="body__struct">
           <h1 class="home-body__title body-active__title">Cơ cấu tổ chức</h1>
           <div class="home-struct__body">
             <div class="home-struct__about">
@@ -338,7 +337,10 @@
             </div>
           </div>
         </section>
-        <section class="home-body__contact" id="home-body__contact">
+        <section
+          class="home-body__contact page-section"
+          id="home-body__contact"
+        >
           <div class="body-contact__logo">
             <img
               src="./assets/img/2logo.png"
@@ -393,23 +395,14 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="./assets/js/jquery.smoove.js"></script>
   <script src="./assets/js/eventHalder.js"></script>
+  <script src="./assets/js/handleEvent.js"></script>
   <script type="text/javascript">
-    $(".home-section").smoove({ offset: "10%" });
-    $(".home-body__active").smoove({ offset: "10%" });
-    $(".body-active-group").smoove({ offset: "10%" });
-    $(".home-body__benefits").smoove({ offset: "10%" });
-    $(".home-body__struct").smoove({ offset: "10%" });
-    $(".home-struct__item-group").smoove({ offset: "10%" });
-    $(".home-body__contact").smoove({ offset: "10%" });
-    //  eventHalder
-    var buttons = document.getElementsByClassName("nav-item__link");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener("click", function () {
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove("active");
-        }
-        this.className += " active";
-      });
-    }
+    $(".home-section").smoove({ offset: "5%" });
+    $(".home-body__active").smoove({ offset: "5%" });
+    $(".body-active-group").smoove({ offset: "5%" });
+    $(".home-body__benefits").smoove({ offset: "5%" });
+    $(".home-body__struct").smoove({ offset: "5%" });
+    $(".home-struct__item-group").smoove({ offset: "5%" });
+    $(".home-body__contact").smoove({ offset: "5%" });
   </script>
 </html>
