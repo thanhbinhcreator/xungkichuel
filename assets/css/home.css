@@ -39,7 +39,7 @@ body {
   width: auto;
   transform-origin: left;
   transform: rotate(90deg);
-  z-index: 1000;
+  z-index: 100;
 }
 .nav-item__link.active {
   background-color: var(--text-color);
@@ -50,6 +50,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  position: relative;
+  z-index: 1000;
 }
 .nav__list--item:not(:first-child) {
   display: inline-block;
@@ -139,14 +141,18 @@ body {
 .body-active__image-par {
   width: 250px;
   height: 176px;
+  border-radius: 10px;
+  box-shadow: -4px 4px 0px 0 var(--primary-color);
+  overflow: hidden;
+  border: 1px solid var(--primary-color);
 }
 .body-active__img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   background-position: cover;
 }
 .body-active__content {
-  margin-left: 10px;
+  margin-left: 25px;
   width: 80%;
   line-height: 30px;
 }
@@ -196,15 +202,15 @@ body {
   align-items: center;
 }
 .home-struct__body {
+  width: 1200px;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .home-struct__about {
   display: flex;
-  max-width: 100%;
+  flex-direction: column;
   justify-content: space-around;
 }
 .home-struct__video {
@@ -218,13 +224,10 @@ body {
   border: 2px solid var(--primary-color);
 }
 .home-struct__desc {
-  max-width: 600px;
+  max-width: 500px;
   font-size: 2.3rem;
   font-weight: 300;
   line-height: 42px;
-}
-.home-struct__content {
-  margin-left: 60px;
 }
 .home-struct__desc span {
   color: var(--primary-color);
@@ -234,6 +237,10 @@ body {
   margin-top: 20px;
 }
 .home-struct__list {
+  display: flex;
+  flex-direction: column;
+}
+.home-struct__item-group {
   display: flex;
 }
 .struct-list__item {
@@ -386,12 +393,13 @@ body {
     font-size: 1.8rem;
     line-height: 25px;
     border-bottom: 1px solid var(--text-color);
-    padding-bottom: 10px;
+    padding: 20px 0;
+    margin-bottom: 10px;
   }
   .body-active__content {
     line-height: 25px;
     text-align: justify;
-    margin-left: 0;
+    margin: 10px 0;
   }
   .body-active__item:nth-child(odd) {
     margin-right: 0;
@@ -432,6 +440,13 @@ body {
   .home-body__struct {
     width: 100%;
     height: auto;
+  }
+  .home-struct__body {
+    width: 100%;
+    flex-direction: column;
+  }
+  .home-struct__item-group {
+    flex-direction: column;
   }
   .home-struct__about {
     flex-direction: column;
