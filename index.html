@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="index, follow" name="robots" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Đội sinh viên Xung kích" />
+    <meta
+      property="og:description"
+      content="Đội sinh viên Xung kích là một trong các CLB/Đội/Nhóm được hiệu trưởng Trường đại học Kinh tế - Luật (Đại học Quốc gia TP. HCM) ký quyết định thành lập và trực thuộc quản lý của phòng Công tác sinh viên. Qua hơn 10 năm thành lập và phát triển đội ngày càng thể hiện rõ vai trò của mình bằng các hoạt động đồng hành phòng Công tác sinh viên hỗ trợ sinh viên ... UEL, myUEL, điểm chuẩn UEL, Điểm chuẩn Kinh tế - Luật, Tuyển Sinh UEL "
+    />
+
+    <meta property="og:image" content="./assets/img/youtube.jpg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:url" content="/" />
+
+    <meta property="og:site_name" content="Đội sinh viên Xung kích" />
+
     <title>Đội Sinh Viên Xung Kích UEL</title>
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,10 +34,11 @@
   <body>
     <div class="xuki">
       <div class="xuki-body">
+        s
         <div class="xuki-nav">
           <ul class="xuki-nav__list">
             <li class="nav__list--item">
-              <a href="#body-about" class="nav-item__link">GIỚI THIỆU</a>
+              <a href="#body-about" class="nav-item__link active">GIỚI THIỆU</a>
             </li>
             <li class="nav__list--item">
               <a href="#body-active" class="nav-item__link">HOẠT ĐỘNG</a>
@@ -76,12 +92,13 @@
                     <h3 class="body-about__title">Đội Sinh Viên Xung Kích</h3>
                   </div>
                   <p class="body-about__desc">
-                    Đội sinh viên Xung kích là tổ chức được hiệu trưởng trường
-                    đại học Kinh tế - Luật (Đại học Quốc gia TP. HCM) ký quyết
-                    định thành lập và trực thuộc quản lý của phòng Công tác sinh
-                    viên. Qua hơn 10 năm thành lập và phát triển đội ngày càng
-                    thể hiện rõ vai trò của mình bằng các hoạt động đồng hành
-                    phòng Công tác sinh viên hỗ trợ sinh viên ...
+                    Đội sinh viên Xung kích là một trong các CLB/Đội/Nhóm được
+                    hiệu trưởng trường đại học Kinh tế - Luật (Đại học Quốc gia
+                    TP. HCM) ký quyết định thành lập và trực thuộc quản lý của
+                    phòng Công tác sinh viên. Qua hơn 10 năm thành lập và phát
+                    triển đội ngày càng thể hiện rõ vai trò của mình bằng các
+                    hoạt động đồng hành phòng Công tác sinh viên hỗ trợ sinh
+                    viên ...
                   </p>
                   <a href="" class="btn btn-primary body-about--btn"
                     >Tham gia đội</a
@@ -247,12 +264,11 @@
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/XWb7oN91JG8"
+                  src="https://www.youtube.com/embed/0AgEeNgHaNI"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
-                  autoplay="1"
                 ></iframe>
               </div>
               <div class="home-struct__content">
@@ -376,13 +392,24 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="./assets/js/jquery.smoove.js"></script>
-  <script>
+  <script src="./assets/js/eventHalder.js"></script>
+  <script type="text/javascript">
     $(".home-section").smoove({ offset: "10%" });
-    $(".home-body__active").smoove({ offset: "5%" });
+    $(".home-body__active").smoove({ offset: "10%" });
     $(".body-active-group").smoove({ offset: "10%" });
     $(".home-body__benefits").smoove({ offset: "10%" });
     $(".home-body__struct").smoove({ offset: "10%" });
-    $(".home-struct__list").smoove({ offset: "20%" });
+    $(".home-struct__list").smoove({ offset: "10%" });
     $(".home-body__contact").smoove({ offset: "10%" });
+    //  eventHalder
+    var buttons = document.getElementsByClassName("nav-item__link");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function () {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove("active");
+        }
+        this.className += " active";
+      });
+    }
   </script>
 </html>

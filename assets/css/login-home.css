@@ -84,3 +84,19 @@ body {
   background-color: #dce0e3;
   font-weight: 700;
 }
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .login_container {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .dont-account {
+    text-align: center;
+    margin: 40px 15.5px 10px 15.5px;
+  }
+}
